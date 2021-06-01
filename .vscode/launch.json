@@ -1,0 +1,15 @@
+{
+    "version": "0.0.1",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "C:/Users/Alejandro Del Moral/go/src/BUREA_BACK",
+            //"env": {"GITHUB_TOKEN": "xxxxx"}, // our app makes a call to the GH API and contains code that fetches this ENV var,
+            //"envFile": "${workspaceFolder}/.env",
+            "args": []
+        }
+    ]
+}
