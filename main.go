@@ -15,6 +15,7 @@ import (
 )
 
 func main() {
+	port := os.Getenv("PORT")
 	e := echo.New()
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
 		AllowOrigins: []string{"*"},
@@ -25,7 +26,8 @@ func main() {
 	e.POST("/upload", uploadFile)
 	e.GET("/files", getFiles)
 	e.DELETE("/delete/:name", deleteFile)
-	e.Logger.Fatal(e.Start(":8000"))
+	//process.env.PORT || 5000
+	e.Logger.Fatal(e.Start(":" + port))
 }
 
 type Document struct {
