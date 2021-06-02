@@ -25,7 +25,7 @@ func main() {
 	e.POST("/upload", uploadFile)
 	e.GET("/files", getFiles)
 	e.DELETE("/delete/:name", deleteFile)
-	e.Logger.Fatal(e.Start(":1323"))
+	e.Logger.Fatal(e.Start(":8000"))
 }
 
 type Document struct {
